@@ -1,2 +1,2 @@
-# IFT2001-scripting
-Scripting workshop for course IFT-2001/GLO-2001
+# Atelier - Écriture de scripts et automatisation de tâches de développement logiciel
+Consultez l'énoncé pour connaître le contenu de l'atelier
