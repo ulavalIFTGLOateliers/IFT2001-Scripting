@@ -1,0 +1,15 @@
+tac  :
+less :
+find :
+grep :
+sort :
+uniq :
+wc   :
+head :
+tail :
+du   :
+curl :
+sed  :
+awk  :
+kill :
+sleep:

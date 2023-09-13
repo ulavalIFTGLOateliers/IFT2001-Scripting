@@ -1,0 +1,12 @@
+nano :
+cd   :
+ls   :
+cat  :
+mkdir:
+rm   :
+rmdir:
+mv   :
+pwd  :
+cp   :
+chmod:
+touch:

@@ -1,0 +1,127 @@
+name: status-checker
+version: 0.1.0.0
+github: 'githubuser/status-checker'
+license: BSD3
+author: 'Author name here'
+maintainer: 'example@example.com'
+copyright: '2022 Author name here'
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/githubuser/status-checker#readme>
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -fplugin=Polysemy.Plugin
+  - -O2
+  - -flate-specialise
+  - -fspecialise-aggressively
+
+default-extensions:
+  # Lifting some standards-imposed limitations
+  - EmptyCase
+  - FlexibleContexts
+  - FlexibleInstances
+  - InstanceSigs
+  - MultiParamTypeClasses
+  # Syntactic conveniences
+  - LambdaCase # allow \case
+  - MultiWayIf # allow if | x -> x + x | otherwise -> 3
+  - NamedFieldPuns # allow Struct {field}
+  - TupleSections # allow (, y) as a function
+  # Deriving
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - DerivingStrategies
+  - GeneralizedNewtypeDeriving # makes newtype easier to use
+  - StandaloneDeriving
+  # Syntactic adjustment
+  - BangPatterns # allow let !x = e for eager evaluation
+  - KindSignatures # allow types of the form * -> *
+  - TypeOperators # allow using operators in types
+  # Strings
+  - OverloadedStrings
+  # Type annotation
+  - ScopedTypeVariables
+  - TypeApplications
+  # Type system
+  - ConstraintKinds
+  - RankNTypes
+  # More type system
+  - ExistentialQuantification
+  - FunctionalDependencies
+  - GADTs
+  # Even more type systems
+  - DataKinds
+  - TypeFamilies
+  - TypeFamilyDependencies
+  # polysemy
+  - PolyKinds
+
+dependencies:
+  - base >= 4.7 && < 5
+  - aeson
+  - bytestring
+  - containers
+  - cron
+  - errors
+  - exceptions
+  - fast-logger
+  - http-conduit
+  - mtl
+  - optparse-generic
+  - persistent
+  - persistent-sqlite
+  - polysemy
+  - polysemy-plugin
+  - servant
+  - servant-server
+  - text
+  - time
+  - utf8-string
+  - wai
+  - wai-cors
+  - wai-logger
+  - warp
+library:
+  source-dirs: src
+
+executables:
+  status-checker-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - status-checker
+
+tests:
+  status-checker-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - status-checker
+      - hspec
+      - QuickCheck

@@ -1,0 +1,243 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 97ff73c920e6d3ec1d10f15a1364d8ba057e5624bb0c907ffb575d3a885388c1
+
+name:           status-checker
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/status-checker#readme>
+homepage:       https://github.com/githubuser/status-checker#readme
+bug-reports:    https://github.com/githubuser/status-checker/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/status-checker
+
+library
+  exposed-modules:
+      CronJobs
+      Endpoint
+      EndpointApi
+      KVS
+      Logging
+      MonotonicSequence
+      Persistence
+      PingEndpoint
+      Server
+      Types
+  other-modules:
+      Paths_status_checker
+  hs-source-dirs:
+      src
+  default-extensions:
+      EmptyCase
+      FlexibleContexts
+      FlexibleInstances
+      InstanceSigs
+      MultiParamTypeClasses
+      LambdaCase
+      MultiWayIf
+      NamedFieldPuns
+      TupleSections
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+      StandaloneDeriving
+      BangPatterns
+      KindSignatures
+      TypeOperators
+      OverloadedStrings
+      ScopedTypeVariables
+      TypeApplications
+      ConstraintKinds
+      RankNTypes
+      ExistentialQuantification
+      FunctionalDependencies
+      GADTs
+      DataKinds
+      TypeFamilies
+      TypeFamilyDependencies
+      PolyKinds
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -fplugin=Polysemy.Plugin -O2 -flate-specialise -fspecialise-aggressively
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , cron
+    , errors
+    , exceptions
+    , fast-logger
+    , http-conduit
+    , mtl
+    , optparse-generic
+    , persistent
+    , persistent-sqlite
+    , polysemy
+    , polysemy-plugin
+    , servant
+    , servant-server
+    , text
+    , time
+    , utf8-string
+    , wai
+    , wai-cors
+    , wai-logger
+    , warp
+  default-language: Haskell2010
+
+executable status-checker-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_status_checker
+  hs-source-dirs:
+      app
+  default-extensions:
+      EmptyCase
+      FlexibleContexts
+      FlexibleInstances
+      InstanceSigs
+      MultiParamTypeClasses
+      LambdaCase
+      MultiWayIf
+      NamedFieldPuns
+      TupleSections
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+      StandaloneDeriving
+      BangPatterns
+      KindSignatures
+      TypeOperators
+      OverloadedStrings
+      ScopedTypeVariables
+      TypeApplications
+      ConstraintKinds
+      RankNTypes
+      ExistentialQuantification
+      FunctionalDependencies
+      GADTs
+      DataKinds
+      TypeFamilies
+      TypeFamilyDependencies
+      PolyKinds
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -fplugin=Polysemy.Plugin -O2 -flate-specialise -fspecialise-aggressively -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , cron
+    , errors
+    , exceptions
+    , fast-logger
+    , http-conduit
+    , mtl
+    , optparse-generic
+    , persistent
+    , persistent-sqlite
+    , polysemy
+    , polysemy-plugin
+    , servant
+    , servant-server
+    , status-checker
+    , text
+    , time
+    , utf8-string
+    , wai
+    , wai-cors
+    , wai-logger
+    , warp
+  default-language: Haskell2010
+
+test-suite status-checker-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      SampleSpec
+      Paths_status_checker
+  hs-source-dirs:
+      test
+  default-extensions:
+      EmptyCase
+      FlexibleContexts
+      FlexibleInstances
+      InstanceSigs
+      MultiParamTypeClasses
+      LambdaCase
+      MultiWayIf
+      NamedFieldPuns
+      TupleSections
+      DeriveFoldable
+      DeriveFunctor
+      DeriveGeneric
+      DeriveLift
+      DeriveTraversable
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+      StandaloneDeriving
+      BangPatterns
+      KindSignatures
+      TypeOperators
+      OverloadedStrings
+      ScopedTypeVariables
+      TypeApplications
+      ConstraintKinds
+      RankNTypes
+      ExistentialQuantification
+      FunctionalDependencies
+      GADTs
+      DataKinds
+      TypeFamilies
+      TypeFamilyDependencies
+      PolyKinds
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -fplugin=Polysemy.Plugin -O2 -flate-specialise -fspecialise-aggressively -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , cron
+    , errors
+    , exceptions
+    , fast-logger
+    , hspec
+    , http-conduit
+    , mtl
+    , optparse-generic
+    , persistent
+    , persistent-sqlite
+    , polysemy
+    , polysemy-plugin
+    , servant
+    , servant-server
+    , status-checker
+    , text
+    , time
+    , utf8-string
+    , wai
+    , wai-cors
+    , wai-logger
+    , warp
+  default-language: Haskell2010

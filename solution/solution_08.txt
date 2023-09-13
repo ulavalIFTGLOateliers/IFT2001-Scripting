@@ -1,0 +1,15 @@
+tac  : Inverse l'ordre des lignes d'un fichier 
+less : Pagination de texte 
+find : Recherche de fichiers 
+grep : Filtre des lignes selon un pattern 
+sort : Trie les lignes 
+uniq : Enlève les lignes doublons 
+wc   : Compte le nombre de lignes, de mots et de caractères 
+head : Affiche le début d'un fichier 
+tail : Affiche la fin d'un fichier 
+du   : Affiche la taille de fichiers 
+curl : Requête réseau (HTTP, FTP, etc.) 
+sed  : Éditeur de ligne 
+awk  : Interpréteur pour le langage \texttt{awk} 
+kill : Arrête un processus 
+sleep: Attend un nombre de secondes 

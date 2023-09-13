@@ -1,0 +1,27 @@
+Building all executables for `status-checker' once. After a successful build of all of them, only specified executables will be rebuilt.
+status-checker> configure (lib + exe)
+Configuring status-checker-0.1.0.0...
+status-checker> build (lib + exe)
+Preprocessing library for status-checker-0.1.0.0..
+Building library for status-checker-0.1.0.0..
+[ 1 of 11] Compiling KVS
+[ 2 of 11] Compiling Logging
+[ 3 of 11] Compiling MonotonicSequence
+[ 4 of 11] Compiling Paths_status_checker
+[ 5 of 11] Compiling Types
+[ 6 of 11] Compiling PingEndpoint
+[ 7 of 11] Compiling Persistence
+[ 8 of 11] Compiling Endpoint
+[ 9 of 11] Compiling EndpointApi
+[10 of 11] Compiling CronJobs
+[11 of 11] Compiling Server
+Preprocessing executable 'status-checker-exe' for status-checker-0.1.0.0..
+Building executable 'status-checker-exe' for status-checker-0.1.0.0..
+[1 of 2] Compiling Main
+[2 of 2] Compiling Paths_status_checker
+Linking .stack-work/dist/x86_64-linux-tinfo6/Cabal-3.4.1.0/build/status-checker-exe/status-checker-exe ...
+status-checker> copy/register
+Installing library in /home/william/Documents/Programming/ateliers-iftglo-2001/atelier_docker/status-checker/.stack-work/install/x86_64-linux-tinfo6/acfaeb205cef7b581761ce388e31c548654773a045c7a255c466eca9f7c39c92/9.0.2/lib/x86_64-linux-ghc-9.0.2/status-checker-0.1.0.0-CXaUMpxQKoM2hIFz1SDQMP
+Installing executable status-checker-exe in /home/william/Documents/Programming/ateliers-iftglo-2001/atelier_docker/status-checker/.stack-work/install/x86_64-linux-tinfo6/acfaeb205cef7b581761ce388e31c548654773a045c7a255c466eca9f7c39c92/9.0.2/bin
+Registering library for status-checker-0.1.0.0..
+

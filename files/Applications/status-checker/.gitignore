@@ -1,0 +1,8 @@
+.stack-work/
+*~
+/.idea/
+/out/
+*.iml
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

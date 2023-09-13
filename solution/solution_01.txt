@@ -1,0 +1,12 @@
+nano : Éditeur de texte simple 
+cd   : Permet de changer de dossier courant 
+ls   : Permet de lister les fichiers dans un dossier 
+cat  : Affiche le contenu d'un fichier 
+mkdir: Créé un dossier 
+rm   : Supprime un fichier ou un dossier 
+rmdir: Supprime un dossier vide 
+mv   : Déplacer un fichier 
+pwd  : Affiche le chemin du répertoire courant 
+cp   : Copie un fichier 
+chmod: Change les permissions d'un fichier 
+touch: Met à jour le timestamp d'un fichier, ou le crée s'il n'existe pas 
