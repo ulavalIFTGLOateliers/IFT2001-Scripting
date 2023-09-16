@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-    if [ ! -d ~/ApplicationData/output/logs/output ]; then
+    if [ ! -d ~/ApplicationData/output/logs/output_backup ]; then
         echo "Incorrect!"
         echo "output n'existe pas"
         exit 1
