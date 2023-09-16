@@ -3,7 +3,7 @@
 cd ~/server
 
 # Lance le serveur en arriere plan
-uvicorn main:app &
+python3 -m uvicorn main:app &
 # Sauvegarde le process ID (pid) du serveur avec $!
 server_pid=$!
 

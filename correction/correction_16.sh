@@ -2,7 +2,7 @@
 
 cd ~/server
 
-uvicorn main:app &> /dev/null &
+python3 -m uvicorn main:app &
 
 server_pid=$!
 stop_server() {
